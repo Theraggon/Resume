@@ -1,37 +1,40 @@
 <script setup>
-import Badge from './ui/Badge.vue';
+import Badge from "./ui/Badge.vue";
 
-const hobbies = ['Guitar', 'Street dance', 'Parkour'];
+const hobbies = ["Guitar", "Street dance", "Parkour"];
 </script>
 
 <template>
   <section id="achievements" class="mb-8">
     <h2>Achievements & Interests</h2>
-    
+
     <div class="mb-6">
       <h3>Cybersecurity Excellence</h3>
       <ul class="list-disc pl-6 space-y-2 mt-2">
         <li>
-          Achieved Top 3 2018 and Top 8 2017 rankings in a nationwide high school cybersecurity competition, 
-          demonstrating advanced analytical and problem-solving capabilities under competitive conditions.
+          Achieved Top 3 2018 and Top 8 2017 rankings in a nationwide high
+          school cybersecurity competition, demonstrating advanced analytical
+          and problem-solving capabilities under competitive conditions.
         </li>
         <li>
-          Selected as an alternate for the Czech national team at the European Cyber Security Challenge, 
-          recognizing high potential in the cybersecurity domain.
+          Selected as an alternate for the Czech national team at the European
+          Cyber Security Challenge, recognizing high potential in the
+          cybersecurity domain.
         </li>
       </ul>
     </div>
-    
+
     <div class="mb-6">
       <h3>Strategic Thinking & Dedication</h3>
       <ul class="list-disc pl-6 space-y-2 mt-2">
         <li>
-          Achieved Diamond rank in League of Legends (top ~3% globally), 
-          demonstrating strategic planning, commitment, and high-percentile performance.
+          Achieved Diamond rank in League of Legends (top ~3% globally),
+          demonstrating strategic planning, commitment, and high-percentile
+          performance.
         </li>
       </ul>
     </div>
-    
+
     <div>
       <h3>Hobbies</h3>
       <div class="flex flex-wrap gap-2 mt-2">
