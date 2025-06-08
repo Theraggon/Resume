@@ -59,12 +59,16 @@ const skillCategories = [
 </script>
 
 <template>
-  <section id="skills" class="mb-8">
+  <section id="skills">
     <h2>Skills</h2>
 
-    <div class="space-y-6">
-      <div v-for="(category, i) in skillCategories" :key="i" class="mb-4">
-        <h3 class="text-xl font-bold mb-2">{{ category.title }}</h3>
+    <div class="flex flex-col gap-6">
+      <div
+        v-for="(category, i) in skillCategories"
+        :key="i"
+        class="flex flex-col gap-4"
+      >
+        <h3 class="text-xl font-bold">{{ category.title }}</h3>
         <div class="flex flex-wrap gap-2">
           <Badge
             v-for="(skill, j) in category.skills"

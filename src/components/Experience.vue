@@ -34,9 +34,9 @@ const experiences = [
 </script>
 
 <template>
-  <section id="experience" class="mb-8">
+  <section id="experience">
     <h2>Experience</h2>
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-16">
       <ExperienceItem
         v-for="(experience, index) in experiences"
         :key="index"

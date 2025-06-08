@@ -1,7 +1,7 @@
 <template>
-  <section id="education" class="mb-8">
+  <section id="education">
     <h2>Education</h2>
-    <div class="mb-6">
+    <div>
       <h3>
         Faculty of Information Technology, Czech Technical University in Prague
         (FIT CTU)

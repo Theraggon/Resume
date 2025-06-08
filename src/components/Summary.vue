@@ -1,7 +1,7 @@
 <template>
-  <section id="summary" class="mb-8">
-    <h2>Summary</h2>
-    <p class="text-lg">
+  <section id="summary">
+    <!-- <h2>Summary</h2> -->
+    <p class="text-lg italic">
       Highly accomplished Lead Frontend Developer with 5+ years of professional
       expertise and over a decade of experience in programming, specializing in
       architecting and delivering accessible, user-centric web applications
@@ -13,3 +13,5 @@
     </p>
   </section>
 </template>
+
+<style scoped></style>

@@ -1,123 +1,77 @@
 <script setup>
 import { ref } from "vue";
 import Button from "./ui/Button.vue";
+import Summary from "./Summary.vue";
+import Navigation from "./Navigation.vue";
 
-defineProps({
-  isDarkMode: Boolean,
-});
-
-defineEmits(["toggle-dark-mode"]);
-
-const mobileNavOpen = ref(false);
+const isMobileNavOpen = ref(false);
 </script>
 
 <template>
   <header
-    class="flex flex-col md:flex-row md:flex-wrap md:items-start items-center md:gap-8 gap-2 justify-between py-4 mb-12"
+    class="flex flex-col md:flex-row md:items-start items-center md:gap-8 gap-2 justify-between py-4"
   >
-    <div class="text-center md:text-left">
+    <div class="text-center md:text-left gap-4 flex flex-col">
       <h1 class="text-4xl font-bold">Ondřej Tesař</h1>
-      <p class="text-xl mt-1">Lead Frontend Developer</p>
-      <div
-        class="flex flex-col items-center justify-center md:justify-start md:items-start mt-4 gap-x-4 gap-y-2"
-      >
-        <a href="mailto:dev.tesar.ondrej@gmail.com" class="flex items-center">
-          <font-awesome-icon :icon="['fas', 'envelope']" class="mr-1" />
-          dev.tesar.ondrej@gmail.com
-        </a>
-        <a href="tel:+420730585330" class="flex items-center">
-          <font-awesome-icon :icon="['fas', 'phone']" class="mr-1" />
-          +420 730 585 330
-        </a>
-        <span class="flex items-center">
-          <font-awesome-icon :icon="['fas', 'location-dot']" class="mr-1" />
-          Prague, Czechia
-        </span>
-        <a
-          href="https://www.linkedin.com/in/ondřej-tesař-179b17148/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center"
+      <div class="flex flex-col gap-2">
+        <p class="text-xl whitespace-nowrap">Lead Frontend Developer</p>
+        <div
+          class="flex flex-col items-center justify-center md:justify-start md:items-start gap-2"
         >
-          <font-awesome-icon :icon="['fab', 'linkedin']" class="mr-1" />
-          LinkedIn
-        </a>
+          <a
+            href="mailto:dev.tesar.ondrej@gmail.com"
+            class="flex items-center gap-2"
+          >
+            <font-awesome-icon :icon="['fas', 'envelope']" />
+            dev.tesar.ondrej@gmail.com
+          </a>
+          <a href="tel:+420730585330" class="flex items-center gap-2">
+            <font-awesome-icon :icon="['fas', 'phone']" />
+            +420 730 585 330
+          </a>
+          <span class="flex items-center gap-2">
+            <font-awesome-icon :icon="['fas', 'location-dot']" />
+            Prague, Czechia
+          </span>
+          <a
+            href="https://www.linkedin.com/in/ondřej-tesař-179b17148/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2"
+          >
+            <font-awesome-icon :icon="['fab', 'linkedin']" />
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/Theraggon"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2"
+          >
+            <font-awesome-icon :icon="['fab', 'github']" />
+            GitHub
+          </a>
+        </div>
       </div>
     </div>
 
-    <!-- Mobile navigation toggle -->
-    <div class="md:hidden mb-4 print:hidden">
-      <Button variant="text" size="md" @click="mobileNavOpen = !mobileNavOpen">
-        <span class="material-icons">{{
-          mobileNavOpen ? "close" : "menu"
-        }}</span>
-      </Button>
-    </div>
-
-    <!-- Navigation - Desktop view as horizontal, Mobile as dropdown -->
-    <nav
-      :class="{
-        'flex flex-col md:flex-row items-center gap-4': true,
-        hidden: !mobileNavOpen,
-        'md:flex': true,
-      }"
-    >
-      <a
-        href="#summary"
-        class="hover:border-b border-gray-700 dark:border-gray-300 py-1"
-        >Summary</a
-      >
-      <a
-        href="#experience"
-        class="hover:border-b border-gray-700 dark:border-gray-300 py-1"
-        >Experience</a
-      >
-      <a
-        href="#education"
-        class="hover:border-b border-gray-700 dark:border-gray-300 py-1"
-        >Education</a
-      >
-      <a
-        href="#skills"
-        class="hover:border-b border-gray-700 dark:border-gray-300 py-1"
-        >Skills</a
-      >
-      <a
-        href="#projects"
-        class="hover:border-b border-gray-700 dark:border-gray-300 py-1"
-        >Projects</a
-      >
-      <a
-        href="#achievements"
-        class="hover:border-b border-gray-700 dark:border-gray-300 py-1"
-        >Achievements</a
-      >
-
-      <div class="flex items-center mt-4 md:mt-0">
+    <div class="flex flex-col items-center md:items-start gap-4">
+      <div class="flex flex-col items-center gap-1">
         <Button
-          variant="outline"
+          variant="text"
           size="md"
-          @click="$emit('toggle-dark-mode')"
-          aria-label="Toggle dark mode"
+          class="md:hidden print:hidden hover:bg-gray-200 dark:hover:bg-gray-700"
+          @click="isMobileNavOpen = !isMobileNavOpen"
         >
-          <font-awesome-icon
-            v-if="isDarkMode"
-            :icon="['fas', 'sun']"
-            class="w-4"
-          />
-          <font-awesome-icon v-else :icon="['fas', 'moon']" class="w-4" />
+          <span class="material-icons">{{
+            isMobileNavOpen ? "close" : "menu"
+          }}</span>
         </Button>
-        <Button
-          class="ml-2 print-hidden"
-          variant="primary"
-          as="a"
-          href="/Ondrej_Tesar.md"
-          download="Ondrej_Tesar.md"
-        >
-          <font-awesome-icon :icon="['fas', 'download']" class="mr-1" />
-          Download CV
-        </Button>
+
+        <Navigation :isMobileNavOpen="isMobileNavOpen" />
       </div>
-    </nav>
+
+      <Summary />
+    </div>
   </header>
 </template>

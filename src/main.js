@@ -6,7 +6,7 @@ import App from "./App.vue";
 // Font Awesome setup
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
   faPhone,
@@ -25,6 +25,7 @@ import {
 // Add icons to the library
 library.add(
   faLinkedin,
+  faGithub,
   faEnvelope,
   faPhone,
   faLocationDot,

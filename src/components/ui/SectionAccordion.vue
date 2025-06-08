@@ -42,7 +42,7 @@ const endTransition = (element) => {
 </script>
 
 <template>
-  <section :id="id" class="mb-8">
+  <section :id="id">
     <div class="border-b border-gray-200 dark:border-gray-700 py-2 accordion">
       <button
         @click="toggle"

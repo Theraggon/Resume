@@ -16,8 +16,8 @@ const sanitizeHTML = (html) => {
 </script>
 
 <template>
-  <div class="mb-6">
-    <div class="mb-2">
+  <div class="flex flex-col gap-2">
+    <div>
       <h3 class="text-xl font-bold">{{ title }}</h3>
       <p class="text-lg font-medium">
         <span>{{ company }}</span> | <span>{{ location }}</span>

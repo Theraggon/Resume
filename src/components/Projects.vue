@@ -37,54 +37,67 @@ const projects = [
       "Web Audio API",
       "Notification API",
       "Azure",
+      "Git",
     ],
   },
   {
     title: "Personal Resume",
     url: "https://resume.theraggon.dev",
     description:
-      "A web application designed to mitigate infrequent minimap monitoring in gaming through customizable audio-visual cues. Hosted on Azure with SSL.",
+      "This personal resume website hosted on Azure and written partly by AI coding agent",
+    technologies: ["Vue 3", "HTML5", "CSS3", "AI", "Azure", "Git"],
   },
 ];
 </script>
 
 <template>
-  <section id="projects" class="mb-8">
+  <section id="projects">
     <h2>Projects</h2>
 
-    <div v-for="(project, index) in projects" :key="index" class="mb-8">
+    <div class="flex flex-col gap-16">
       <div
-        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4"
+        v-for="(project, index) in projects"
+        :key="index"
+        class="flex flex-col gap-6"
       >
-        <h3 class="text-xl font-bold">{{ project.title }}</h3>
-        <Button
-          variant="text"
-          as="a"
-          :href="project.url"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex items-center mt-1 md:mt-0"
-        >
-          <span>{{ project.url }}</span>
-          <span class="material-icons text-sm ml-1">open_in_new</span>
-        </Button>
-      </div>
-      <p class="mb-4">{{ project.description }}</p>
+        <div class="flex flex-col gap-2">
+          <div
+            class="flex flex-row flex-wrap gap-4 justify-between items-center md:items-center"
+          >
+            <h3 class="text-xl font-bold">{{ project.title }}</h3>
+            <Button
+              variant="text"
+              as="a"
+              size="sm"
+              :href="project.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center mt-1 md:mt-0"
+            >
+              <span>{{ project.url }}</span>
+              <span class="material-icons text-sm ml-1">open_in_new</span>
+            </Button>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p>{{ project.description }}</p>
 
-      <div class="flex flex-wrap gap-2 mb-4">
-        <Badge
-          v-for="(tech, i) in project.technologies"
-          :key="i"
-          :text="tech"
-          variant="default"
-        />
-      </div>
+            <div class="flex flex-wrap gap-2">
+              <Badge
+                v-for="(tech, i) in project.technologies"
+                :key="i"
+                :text="tech"
+                variant="default"
+              />
+            </div>
+          </div>
+        </div>
 
-      <div class="space-y-4">
-        <div v-for="(detail, i) in project.details" :key="i">
-          <p>
-            <strong>{{ detail.label }}:</strong> {{ detail.content }}
-          </p>
+        <div class="flex flex-col gap-4">
+          <div v-for="(detail, i) in project.details" :key="i">
+            <p>
+              <strong>{{ detail.label }}:</strong> {{ detail.content }}
+            </p>
+          </div>
         </div>
       </div>
     </div>

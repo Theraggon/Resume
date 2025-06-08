@@ -54,7 +54,10 @@ defineProps({
     :disabled="disabled"
     :class="[
       'inline-flex items-center justify-center rounded font-medium',
-      // Variants      variant === 'default' ? 'bg-gray-200 hover:bg-gray-300 text-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white' : '',
+      // Variants
+      variant === 'default'
+        ? 'bg-gray-200 hover:bg-gray-300 text-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-white'
+        : '',
       variant === 'primary'
         ? 'bg-yellow-400 hover:bg-yellow-500 text-gray-900 dark:bg-yellow-400 dark:hover:bg-yellow-500 dark:text-gray-900'
         : '',
