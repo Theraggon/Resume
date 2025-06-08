@@ -43,6 +43,14 @@ html.dark {
   color-scheme: dark;
 }
 
+@media print {
+  /* Add print-specific styles */
+  .print-light-mode {
+    background-color: white !important;
+    color: #111827 !important;
+  }
+}
+
 section {
   @apply py-10 border-b border-gray-200 dark:border-gray-700 scroll-mt-20;
 }

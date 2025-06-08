@@ -12,7 +12,7 @@ const experiences = [
       'Engineered the frontend for Bank iD\'s <a href="https://podepis.bankid.cz/">podepis.bankid.cz</a>, enabling secure document signing for anyone to try for free.',
       "Utilized Mozilla's PDF.js for robust PDF document display within the application, ensuring accurate rendering even for some very large documents.",
       "Maintained and enhanced the legacy drag-and-drop system for signature placement (DnD API), and contributed to a major rewrite aiming for seamless support across all device types.",
-      "Spearheaded the development of WAI-ARIA accessibility features according to best practices, significantly improving accessibility compliance and user experience for individuals with disabilities.",
+      "Spearheaded the development of WAI-ARIA accessibility features according to the best practices, significantly improving accessibility compliance and user experience for individuals with disabilities.",
       "Implemented internationalization (i18n) using i18next, enabling support for multiple languages and expanding the application's reach world-wide.",
       "Drove the adoption of unit testing (Vitest).",
       "Translated complex Figma designs into pixel-perfect, interactive Vue.js components, ensuring high fidelity to design specifications and delivering over 100 key UI modules.",

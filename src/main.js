@@ -14,6 +14,12 @@ import {
   faSun,
   faMoon,
   faDownload,
+  faChevronDown,
+  faChevronRight,
+  faAngleUp,
+  faAngleDown,
+  faPlus,
+  faMinus,
 } from "@fortawesome/free-solid-svg-icons";
 
 // Add icons to the library
@@ -24,7 +30,13 @@ library.add(
   faLocationDot,
   faSun,
   faMoon,
-  faDownload
+  faDownload,
+  faChevronDown,
+  faChevronRight,
+  faAngleUp,
+  faAngleDown,
+  faPlus,
+  faMinus
 );
 
 // For a single page resume site, we only need one route

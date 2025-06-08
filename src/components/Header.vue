@@ -9,10 +9,6 @@ defineProps({
 defineEmits(["toggle-dark-mode"]);
 
 const mobileNavOpen = ref(false);
-
-const print = () => {
-  window.print();
-};
 </script>
 
 <template>
@@ -104,10 +100,20 @@ const print = () => {
           @click="$emit('toggle-dark-mode')"
           aria-label="Toggle dark mode"
         >
-          <font-awesome-icon v-if="isDarkMode" :icon="['fas', 'sun']" />
-          <font-awesome-icon v-else :icon="['fas', 'moon']" />
+          <font-awesome-icon
+            v-if="isDarkMode"
+            :icon="['fas', 'sun']"
+            class="w-4"
+          />
+          <font-awesome-icon v-else :icon="['fas', 'moon']" class="w-4" />
         </Button>
-        <Button class="ml-2 print-hidden" variant="primary" @click="print">
+        <Button
+          class="ml-2 print-hidden"
+          variant="primary"
+          as="a"
+          href="/Ondrej_Tesar.md"
+          download="Ondrej_Tesar.md"
+        >
           <font-awesome-icon :icon="['fas', 'download']" class="mr-1" />
           Download CV
         </Button>
