@@ -40,7 +40,11 @@ const isMobileNavOpen = ref(false);
             class="flex items-center gap-2"
           >
             <font-awesome-icon :icon="['fab', 'linkedin']" />
-            LinkedIn
+
+            <span class="print:hidden"> LinkedIn </span>
+            <span class="hidden print:inline"
+              >linkedin.com/in/ondřej-tesař-179b17148/
+            </span>
           </a>
           <a
             href="https://github.com/Theraggon"
@@ -49,13 +53,14 @@ const isMobileNavOpen = ref(false);
             class="flex items-center gap-2"
           >
             <font-awesome-icon :icon="['fab', 'github']" />
-            GitHub
+            <span class="print:hidden"> GitHub </span>
+            <span class="hidden print:inline">github.com/Theraggon</span>
           </a>
         </div>
       </div>
     </div>
 
-    <div class="flex flex-col items-center md:items-start gap-4">
+    <div class="flex flex-col items-center md:items-start gap-4 print:md:gap-0">
       <div class="flex flex-col items-center gap-1">
         <Button
           variant="text"

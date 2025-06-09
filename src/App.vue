@@ -18,11 +18,17 @@ import Footer from "./components/Footer.vue";
         <Experience />
         <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
         <Education />
-        <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
+        <hr
+          class="h-px bg-gray-200 border-0 dark:bg-gray-700 print:max-md:mb-2"
+        />
         <Skills />
-        <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
+        <hr
+          class="h-px bg-gray-200 border-0 dark:bg-gray-700 print:max-md:mb-62"
+        />
         <Projects />
-        <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
+        <hr
+          class="h-px bg-gray-200 border-0 dark:bg-gray-700 print:max-md:mb-28"
+        />
         <Achievements />
       </main>
 
