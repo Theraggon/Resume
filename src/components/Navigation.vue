@@ -17,7 +17,7 @@ const { isDarkMode, toggleDarkMode } = useDarkMode();
     :class="{
       hidden: !isMobileNavOpen,
     }"
-    class="flex flex-col md:flex-row flex-wrap items-center gap-4 md:flex min-h-10"
+    class="flex flex-col md:flex-row flex-wrap items-center gap-4 md:flex min-h-10 print:hidden"
   >
     <a
       href="#experience"
