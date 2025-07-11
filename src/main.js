@@ -6,7 +6,16 @@ import App from "./App.vue";
 // Font Awesome setup
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { 
+  faLinkedin, 
+  faGithub,
+  faVuejs,
+  faJs,
+  faHtml5,
+  faCss3Alt,
+  faFigma,
+  faGitAlt
+} from "@fortawesome/free-brands-svg-icons";
 import {
   faEnvelope,
   faPhone,
@@ -20,12 +29,26 @@ import {
   faAngleDown,
   faPlus,
   faMinus,
+  faCode,
+  faBolt,
+  faUniversalAccess,
+  faRobot,
+  faGlobe,
+  faFilePdf
 } from "@fortawesome/free-solid-svg-icons";
 
 // Add icons to the library
 library.add(
+  // Brand icons
   faLinkedin,
   faGithub,
+  faVuejs,
+  faJs,
+  faHtml5,
+  faCss3Alt,
+  faFigma,
+  faGitAlt,
+  // Solid icons
   faEnvelope,
   faPhone,
   faLocationDot,
@@ -37,7 +60,13 @@ library.add(
   faAngleUp,
   faAngleDown,
   faPlus,
-  faMinus
+  faMinus,
+  faCode,
+  faBolt,
+  faUniversalAccess,
+  faRobot,
+  faGlobe,
+  faFilePdf
 );
 
 // For a single page resume site, we only need one route

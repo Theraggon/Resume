@@ -1,5 +1,6 @@
 <script setup>
 import Badge from "./ui/Badge.vue";
+import CurrentTechnologies from "./CurrentTechnologies.vue";
 
 const skillCategories = [
   {
@@ -61,7 +62,9 @@ const skillCategories = [
 <template>
   <section id="skills">
     <h2>Skills</h2>
-
+    
+    <CurrentTechnologies />
+    
     <div class="flex flex-col gap-6">
       <div
         v-for="(category, i) in skillCategories"

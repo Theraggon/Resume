@@ -16,14 +16,16 @@ import Footer from "./components/Footer.vue";
 
       <main class="flex flex-col gap-10">
         <Experience />
-        <hr class="h-px bg-gray-200 border-0 dark:bg-gray-700" />
+        <hr
+          class="h-px bg-gray-200 border-0 dark:bg-gray-700 print:max-md:mb-80"
+        />
         <Education />
         <hr
-          class="h-px bg-gray-200 border-0 dark:bg-gray-700 print:max-md:mb-2"
+          class="h-px bg-gray-200 border-0 dark:bg-gray-700 print:max-md:mb-20"
         />
         <Skills />
         <hr
-          class="h-px bg-gray-200 border-0 dark:bg-gray-700 print:max-md:mb-62"
+          class="h-px bg-gray-200 border-0 dark:bg-gray-700 print:max-md:mb-76"
         />
         <Projects />
         <hr
